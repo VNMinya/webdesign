@@ -1,0 +1,8 @@
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
+target/classes/com/njxzc/dao/TestDaoImpl.class
+target/classes/com/njxzc/dao/TestDao.class
+target/
