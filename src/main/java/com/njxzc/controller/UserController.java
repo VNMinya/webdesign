@@ -1,13 +1,17 @@
 package com.njxzc.controller;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import com.njxzc.dao.UserDao;
 import com.njxzc.po.MyUser;
+
+import javax.annotation.Resource;
+
 @Controller("userController")
 public class UserController {
-	@Autowired
+
+@Resource
 	private UserDao userDao;
 	public void test() {
 		/**
