@@ -7,12 +7,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>webdesign Maven Webapp</name>
     <url>http://maven.apache.org</url>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <!-- using -->
-
         <spring.version>5.0.2.RELEASE</spring.version>
         <mybatis.version>3.4.5</mybatis.version>
         <mybatis.spring.version>1.3.1</mybatis.spring.version>
@@ -293,6 +290,15 @@
     </dependencies>
     <build>
         <finalName>webdesign</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -310,13 +316,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <!--	<plugin>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <configuration>
-                        <version>3.2.2</version>
-                    </configuration>
-                </plugin>
-        -->
+           
         </plugins>
     </build>
 
