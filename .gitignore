@@ -3,4 +3,5 @@
 
 # Ada Library Information
 *.ali
+ .idea/ workspace.xml
 target/
