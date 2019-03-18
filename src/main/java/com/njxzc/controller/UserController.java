@@ -8,7 +8,7 @@ import com.njxzc.po.MyUser;
 
 import javax.annotation.Resource;
 
-@Controller("userController")
+@Controller(value = "userController")
 public class UserController {
 
 @Resource
