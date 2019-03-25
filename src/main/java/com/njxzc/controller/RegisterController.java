@@ -7,6 +7,6 @@ public class RegisterController implements Controller{
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
 		//return new ModelAndView("/WEB-INF/jsp/register.jsp");
-		return new ModelAndView("register");
+		return new ModelAndView("registerbean");
 	}
 }

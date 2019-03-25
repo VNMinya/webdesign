@@ -7,6 +7,6 @@ public class LoginController implements Controller{
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
 		//return new ModelAndView("/WEB-INF/jsp/login.jsp");
-		return new ModelAndView("login");
+		return new ModelAndView("loginbean");
 	}
 }
