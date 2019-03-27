@@ -1,4 +1,4 @@
-package service;
+package com.njxzc.service;
 import org.springframework.stereotype.Service;
 
 import com.njxzc.po.UserForm;

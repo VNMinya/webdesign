@@ -7,8 +7,8 @@ import com.njxzc.dao.UserDao;
 import com.njxzc.po.MyUser;
 import javax.annotation.Resource;
 
-@Controller(value = "userController")
-public class UserController {
+@Controller(value = "UserControllerMybatis")
+public class UserControllerMybatis {
 	@Resource
 	private UserDao userDao;
 	public void test() {
