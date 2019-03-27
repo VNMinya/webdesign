@@ -13,6 +13,7 @@
     <!-- 使用扫描机制，扫描控制器类 -->
     <context:component-scan base-package="com.njxzc.controller"/>  
     <context:component-scan base-package="com.njxzc.service"/>  
+    <context:component-scan base-package="com.njxzc.dao"/>
     <mvc:annotation-driven />
     <!-- annotation-driven用于简化开发的配置，
     注解DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter -->
