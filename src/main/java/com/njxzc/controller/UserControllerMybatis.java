@@ -28,6 +28,7 @@ public class UserControllerMybatis {
 		// 添加一个用户
 		MyUser addmu = new MyUser();
 		addmu.setUname("陈恒");
+		addmu.setUserage(34);
 		addmu.setUsex("男");
 		int add = userDao.addUser(addmu);
 		System.out.println("添加了" + add + "条记录");
