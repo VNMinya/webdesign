@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.njxzc.po.MyUser;
 import com.njxzc.po.UserForm;
 import com.njxzc.service.UserService;
 
@@ -22,11 +24,13 @@ public class UserController {
 	 * 处理登录
 	 */
 	@RequestMapping("/login")
-	public String login(UserForm user, HttpSession session, Model model) {
+	public String login(MyUser user, HttpSession session, Model model) {
 		if(userService.login(user)){
 			session.setAttribute("u", user);
 			logger.info("成功");
 			return "main";//登录成功，跳转到main.jsp
+	
+		
 		}else{
 			logger.info("失败");
 			model.addAttribute("messageError", "用户名或密码错误");

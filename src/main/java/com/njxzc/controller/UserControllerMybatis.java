@@ -21,10 +21,10 @@ public class UserControllerMybatis {
 		/**
 		 * 根据name查询人员
 		 */
-		List<MyUser> li = userDao.selectUserByName("陈恒");
-		for (MyUser myUser : li) {
-			System.out.println(myUser);
-		}
+//		List<MyUser> li = userDao.selectUserByName("陈恒");
+//		for (MyUser myUser : li) {
+//			System.out.println(myUser);
+//		}
 		// 添加一个用户
 		MyUser addmu = new MyUser();
 		addmu.setUname("陈恒");

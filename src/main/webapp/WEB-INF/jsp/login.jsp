@@ -46,7 +46,7 @@
 		</tr>
 		<tr>
 			<td>密码：</td>
-			<td><input type="password" name="upass" class="textSize"></td>
+			<td><input type="password" name="password" class="textSize"></td>
 		</tr>
 		<tr>
 			<td colspan="2">

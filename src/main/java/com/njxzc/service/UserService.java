@@ -1,9 +1,10 @@
 package com.njxzc.service;
 
 
+import com.njxzc.po.MyUser;
 import com.njxzc.po.UserForm;
 
 public interface UserService {
-	boolean login(UserForm user);
+	boolean login(MyUser user);
 	boolean register(UserForm user);
 }
