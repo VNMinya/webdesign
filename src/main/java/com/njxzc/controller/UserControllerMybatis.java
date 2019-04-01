@@ -8,6 +8,9 @@ import com.njxzc.po.MyUser;
 import javax.annotation.Resource;
 
 @Controller(value = "UserControllerMybatis")
+/**
+ *
+ */
 public class UserControllerMybatis {
 	@Resource
 	private UserDao userDao;

@@ -6,5 +6,5 @@ import com.njxzc.po.UserForm;
 
 public interface UserService {
 	boolean login(MyUser user);
-	boolean register(UserForm user);
+	boolean register(MyUser user);
 }

@@ -16,8 +16,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<!-- 添加一个用户 ，#{uname}为com.mybatis.po.MyUser的属性值 -->
 	<insert id="addUser" parameterType="com.njxzc.po.MyUser">
-		insert into myuser (uname,usex)
-		values(#{uname},#{usex})
+		insert into myuser (uname,password)
+		values(#{uname},#{password})
 	</insert>
 	<!-- 修改一个用户 -->
 	<update id="updateUser" parameterType="com.njxzc.po.MyUser">

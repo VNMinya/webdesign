@@ -34,9 +34,10 @@
 	}
 	</script>
   </head>
-  <body>
+  <body >
+  <div align="center">
   	<form action="${pageContext.request.contextPath }/user/login" method="post">
-	<table>
+	<table align="center">
 		<tr>
 			<td colspan="2"><img src="${pageContext.request.contextPath }/images/login.gif"></td>
 		</tr>
@@ -57,5 +58,6 @@
 	</table>
 	${messageError }
 	</form>
+  </div>
   </body>
 </html>

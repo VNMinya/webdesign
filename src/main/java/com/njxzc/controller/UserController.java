@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.njxzc.po.MyUser;
-import com.njxzc.po.UserForm;
 import com.njxzc.service.UserService;
 
 @Controller
@@ -40,13 +39,15 @@ public class UserController {
 	/**
 	 *处理注册
 	 */
+
+
 	@RequestMapping("/register")
-	public String register(@ModelAttribute("user") UserForm user) {
+	public String register(@ModelAttribute("user") MyUser user) {
 		if(userService.register(user)){
-			logger.info("成功");
+			logger.info("注册成功！");
 			return "login";//注册成功，跳转到login.jsp
 		}else{
-			logger.info("失败");
+			logger.info("该用户已存在，注册失败！");
 			//使用@ModelAttribute("user")与model.addAttribute("user", user)功能相同
 		  //在register.jsp页面上可以使用EL表达式${user.uname}取出ModelAttribute的uname值
 			return "register";//返回register.jsp

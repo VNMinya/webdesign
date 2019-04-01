@@ -6,6 +6,8 @@
 <title>主页面</title>
 </head>
 <body>
+<div align="center">
 	欢迎${sessionScope.u.uname }访问该系统。
+</div>
 </body>
 </html>

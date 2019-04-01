@@ -30,9 +30,15 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public boolean register(UserForm user) {
-		if ("zhangsan".equals(user.getUname()) && "123456".equals(user.getUpass()))
+	public boolean register(MyUser user) {
+		MyUser u = userdao.selectUserByName(user.getUname());
+		if (ObjectUtil.isNotNull(u)) {
+			return false;
+
+		} else {
+			userdao.addUser(user);
 			return true;
-		return false;
+		}
+
 	}
 }
