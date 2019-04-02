@@ -11,7 +11,7 @@ import com.njxzc.po.UserForm;
 //注解为一个服务
 @Service
 public class UserServiceImpl implements UserService {
-	@Autowired
+@Autowired
 	private UserDao userdao;
 
 	@Override
@@ -41,4 +41,11 @@ public class UserServiceImpl implements UserService {
 		}
 
 	}
+
+	@Override
+	public List<MyUser> listAllUsers() {
+		List<MyUser> us=userdao.selectAllUser();
+		return us;
+	}
+
 }

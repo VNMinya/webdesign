@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,7 +8,7 @@
 </head>
 <body>
 <div align="center">
-	欢迎${sessionScope.u.uname }访问该系统。
+	欢迎${"u.uname"}访问该系统。
 	<h3 align="center">用户列表</h3>
 	<table align="center" width="95%" border="1" cellpadding="2"	   cellspacing="1"	 >
 
@@ -36,7 +37,7 @@
 		</s:iterator>
 		-->
 
-		<c:forEach items="${userList}" var="user">
+		<c:forEach items="${userlist}" var="user">
 			<tr>
 				<td align="center">${user.uname}</td>
 				<td align="center">${user.usex}</td>

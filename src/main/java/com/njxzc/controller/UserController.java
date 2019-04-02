@@ -1,5 +1,6 @@
 package com.njxzc.controller;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.logging.Log;
@@ -14,6 +15,8 @@ import com.njxzc.po.MyUser;
 import com.njxzc.service.UserService;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -21,10 +24,11 @@ public class UserController {
     private static final Log logger = LogFactory.getLog(UserController.class);
     //将服务依赖注入到属性userService
     @Autowired
-    public UserService userService;
+    private UserService userService;
+
 
     /**
-     * 处理登录
+     * 处理登录没有mybatis
      */
     @RequestMapping("/login1")
 
@@ -40,11 +44,22 @@ public class UserController {
             return "login";
         }
     }
+    /*
+     * @Description:从数据库中获取人员，检验身份的合法性。
+     * @param [user]
+     * @Return: org.springframework.web.servlet.ModelAndView
+     * @Author: Roy xu
+     * @Date: 4/2/2019 8:49 AM
+    **/
     @RequestMapping("/login")
+
     public ModelAndView login(@ModelAttribute("user") MyUser user) {
         ModelAndView mav = new ModelAndView("main");
         if (userService.login(user)) {
-            mav.addObject("user", user);
+    //        mav.addObject("u",user);
+           List<MyUser> users=userService.listAllUsers();
+            System.out.println(users);
+            mav.addObject("userlist", users);
             return mav;
         } else {
             logger.info("失败");
