@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align="center">
-	欢迎${"u.uname"}访问该系统。
+	欢迎${u.uname}访问该系统。
 	<h3 align="center">用户列表</h3>
 	<table align="center" width="95%" border="1" cellpadding="2"	   cellspacing="1"	 >
 
@@ -20,6 +20,14 @@
                 <td align="center" width="80px" nowrap>地址</td>
                 <td align="center" width="20px" nowrap>密码</td>
             </tr> -->
+		<br>
+		<div align="center">
+			<form action="${pageContext.request.contextPath }/user/select" method="post">
+			查找用户：<input type="text" name="uname"/> <br>
+			<input type="submit" value="提交"/>
+		</form>
+		</div>
+
 		<tr align="center">
 			<th class="text-center">用户名称</th>
 			<th class="text-center">用户性别</th>

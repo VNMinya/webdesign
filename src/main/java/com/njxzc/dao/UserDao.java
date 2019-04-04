@@ -1,6 +1,5 @@
 package com.njxzc.dao;
 import java.util.List;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import com.njxzc.po.MyUser;
@@ -14,6 +13,7 @@ public interface UserDao {
 	 */
 	public MyUser selectUserById(Integer uid);
 	public MyUser selectUserByName(String uname);
+	public List<MyUser> selectUserByUname(MyUser user);
 	public List<MyUser> selectAllUser();
 	public int addUser(MyUser user);
 	public int updateUser(MyUser user);

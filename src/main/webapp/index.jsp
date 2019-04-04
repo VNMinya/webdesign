@@ -16,6 +16,7 @@
 	<br><a>基于注解方式的控制:</a>
 	<br>没注册的用户，请<a href="${pageContext.request.contextPath }/index/register">注册</a>！
 	<br>已注册的用户，去<a href="${pageContext.request.contextPath }/index/login">登录</a>！
+
 </div>
 </body>
 </html>

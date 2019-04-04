@@ -3,6 +3,7 @@ package com.njxzc.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import com.njxzc.dao.UserDao;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,16 @@ public class UserController {
     //将服务依赖注入到属性userService
     @Autowired
     private UserService userService;
+    @Autowired
+    private UserDao userdao;
+    @RequestMapping("/select")
+    //TODO
+    public String select(MyUser user, Model model){
+        List<MyUser> list= userdao.selectUserByUname(user);
+        model.addAttribute("userList", list);
+//        model.addAttribute("u", user);
+        return "userList";
+    }
 
 
     /**
@@ -56,7 +67,7 @@ public class UserController {
     public ModelAndView login(@ModelAttribute("user") MyUser user) {
         ModelAndView mav = new ModelAndView("main");
         if (userService.login(user)) {
-    //        mav.addObject("u",user);
+            mav.addObject("u",user);
            List<MyUser> users=userService.listAllUsers();
             System.out.println(users);
             mav.addObject("userlist", users);
@@ -85,4 +96,5 @@ public class UserController {
             return "register";//返回register.jsp
         }
     }
+
 }

@@ -12,7 +12,6 @@ public class MyUser {
 	 *  @BareFieldName : uid
 	 *  @return  the uid
 	 */
-	
 	public Integer getUid() {
 		return uid;
 	}
